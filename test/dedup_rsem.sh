@@ -1,0 +1,1 @@
+nice /home/billylau/RSEM-1.2.22/rsem-calculate-expression --bam --estimate-rspd --no-bam-output --seed 12345 -p 40 --paired-end analysis/dedup_star/test.Aligned.toTranscriptome.out.bam /mnt/ix2/research_copy/sep_people/20131229_billy_projects/genomes/rsem/Homo_sapiens.GRCh37.75.RSEM analysis/dedup_rsem/test.rsem --no-qualities

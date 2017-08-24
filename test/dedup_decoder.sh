@@ -1,0 +1,1 @@
+nice /mnt/ix2/20170824_BL_EXB_scripts//scripts/exb_extract_decoder.py -i analysis/exb_stats/test.cd.out | cutadapt -b CTGTCTCTTATACACATCT - | paste - - - - | awk '{if (($2 != "") && ($4 != "")) print($1"\n"$2"\n"$3"\n"$4)}' | gzip > analysis/dedup/test.fa.gz

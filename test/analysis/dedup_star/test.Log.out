@@ -1,0 +1,869 @@
+STAR version=STAR_2.4.2a
+STAR compilation time,server,dir=Fri Jun 19 17:13:08 EDT 2015 modena.cshl.edu:/sonas-hs/gingeras/nlsas_norepl/user/dobin/STAR/Releases/STAR_2.4.2a/source
+##### DEFAULT parameters:
+versionSTAR                       20201
+versionGenome                     20101   20200   
+parametersFiles                   -   
+sysShell                          -
+runMode                           alignReads
+runThreadN                        1
+runDirPerm                        User_RWX
+genomeDir                         ./GenomeDir/
+genomeLoad                        NoSharedMemory
+genomeFastaFiles                  -   
+genomeSAindexNbases               14
+genomeChrBinNbits                 18
+genomeSAsparseD                   1
+readFilesIn                       Read1   Read2   
+readFilesCommand                  -   
+readMatesLengthsIn                NotEqual
+readMapNumber                     18446744073709551615
+inputBAMfile                      -
+bamRemoveDuplicatesType           -
+bamRemoveDuplicatesMate2basesN    0
+limitGenomeGenerateRAM            31000000000
+limitIObufferSize                 150000000
+limitOutSAMoneReadBytes           100000
+limitOutSJcollapsed               1000000
+limitOutSJoneRead                 1000
+limitBAMsortRAM                   0
+limitSjdbInsertNsj                1000000
+outTmpDir                         -
+outStd                            Log
+outReadsUnmapped                  None
+outQSconversionAdd                0
+outSAMtype                        SAM   
+outSAMmode                        Full
+outSAMstrandField                 None
+outSAMattributes                  Standard   
+outSAMunmapped                    None
+outSAMorder                       Paired
+outSAMprimaryFlag                 OneBestScore
+outSAMreadID                      Standard
+outSAMmapqUnique                  255
+outSAMflagOR                      0
+outSAMflagAND                     65535
+outSAMattrRGline                  -   
+outSAMheaderHD                    -   
+outSAMheaderPG                    -   
+outSAMheaderCommentFile           -
+outBAMcompression                 1
+outBAMsortingThreadN              0
+outSJfilterReads                  All
+outSJfilterCountUniqueMin         3   1   1   1   
+outSJfilterCountTotalMin          3   1   1   1   
+outSJfilterOverhangMin            30   12   12   12   
+outSJfilterDistToOtherSJmin       10   0   5   10   
+outSJfilterIntronMaxVsReadN       50000   100000   200000   
+outWigType                        None   
+outWigStrand                      Stranded   
+outWigReferencesPrefix            -
+outWigNorm                        RPM   
+outFilterType                     Normal
+outFilterMultimapNmax             10
+outFilterMultimapScoreRange       1
+outFilterScoreMin                 0
+outFilterScoreMinOverLread        0.66
+outFilterMatchNmin                0
+outFilterMatchNminOverLread       0.66
+outFilterMismatchNmax             10
+outFilterMismatchNoverLmax        0.3
+outFilterMismatchNoverReadLmax    1
+outFilterIntronMotifs             None
+clip5pNbases                      0   
+clip3pNbases                      0   
+clip3pAfterAdapterNbases          0   
+clip3pAdapterSeq                  -   
+clip3pAdapterMMp                  0.1   
+winBinNbits                       16
+winAnchorDistNbins                9
+winFlankNbins                     4
+winAnchorMultimapNmax             50
+scoreGap                          0
+scoreGapNoncan                    -8
+scoreGapGCAG                      -4
+scoreGapATAC                      -8
+scoreStitchSJshift                1
+scoreGenomicLengthLog2scale       -0.25
+scoreDelBase                      -2
+scoreDelOpen                      -2
+scoreInsOpen                      -2
+scoreInsBase                      -2
+seedSearchLmax                    0
+seedSearchStartLmax               50
+seedSearchStartLmaxOverLread      1
+seedPerReadNmax                   1000
+seedPerWindowNmax                 50
+seedNoneLociPerWindow             10
+seedMultimapNmax                  10000
+alignIntronMin                    21
+alignIntronMax                    0
+alignMatesGapMax                  0
+alignTranscriptsPerReadNmax       10000
+alignSJoverhangMin                5
+alignSJDBoverhangMin              3
+alignSplicedMateMapLmin           0
+alignSplicedMateMapLminOverLmate    0.66
+alignWindowsPerReadNmax           10000
+alignTranscriptsPerWindowNmax     100
+alignEndsType                     Local
+alignSoftClipAtReferenceEnds      Yes
+chimSegmentMin                    0
+chimScoreMin                      0
+chimScoreDropMax                  20
+chimScoreSeparation               10
+chimScoreJunctionNonGTAG          -1
+chimJunctionOverhangMin           20
+chimOutType                       SeparateSAMold
+sjdbFileChrStartEnd               -   
+sjdbGTFfile                       -
+sjdbGTFchrPrefix                  -
+sjdbGTFfeatureExon                exon
+sjdbGTFtagExonParentTranscript    transcript_id
+sjdbGTFtagExonParentGene          gene_id
+sjdbOverhang                      100
+sjdbScore                         2
+sjdbInsertSave                    Basic
+quantMode                         -   
+quantTranscriptomeBAMcompression    1
+quantTranscriptomeBan             IndelSoftclipSingleend
+twopass1readsN                    18446744073709551615
+twopassMode                       None
+##### Command Line:
+/home/billylau/star --genomeDir /mnt/ix2/research_copy/sep_people/20131229_billy_projects/genomes/star_ensembl_grch37.75_ercc/ --outFileNamePrefix analysis/dedup_star/test. --runThreadN 40 --readFilesIn /dev/fd/63 /dev/fd/62 --outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM GeneCounts --outSAMunmapped Within --outFilterType BySJout --outSAMattributes NH HI AS NM MD --outFilterMultimapNmax 20 --alignSJoverhangMin 8 --alignSJDBoverhangMin 1 --sjdbScore 1 --outFilterMismatchNmax 999 --alignIntronMin 20 --alignIntronMax 1000000 --alignMatesGapMax 1000000 --outFilterMatchNminOverLread 0 --outFilterScoreMinOverLread 0
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 analysis/dedup_star/test.
+###### All USER parameters from Command Line:
+genomeDir                     /mnt/ix2/research_copy/sep_people/20131229_billy_projects/genomes/star_ensembl_grch37.75_ercc/     ~RE-DEFINED
+outFileNamePrefix             analysis/dedup_star/test.     ~RE-DEFINED
+runThreadN                    40     ~RE-DEFINED
+readFilesIn                   /dev/fd/63   /dev/fd/62        ~RE-DEFINED
+outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+quantMode                     TranscriptomeSAM   GeneCounts        ~RE-DEFINED
+outSAMunmapped                Within     ~RE-DEFINED
+outFilterType                 BySJout     ~RE-DEFINED
+outSAMattributes              NH   HI   AS   NM   MD        ~RE-DEFINED
+outFilterMultimapNmax         20     ~RE-DEFINED
+alignSJoverhangMin            8     ~RE-DEFINED
+alignSJDBoverhangMin          1     ~RE-DEFINED
+sjdbScore                     1     ~RE-DEFINED
+outFilterMismatchNmax         999     ~RE-DEFINED
+alignIntronMin                20     ~RE-DEFINED
+alignIntronMax                1000000     ~RE-DEFINED
+alignMatesGapMax              1000000     ~RE-DEFINED
+outFilterMatchNminOverLread   0     ~RE-DEFINED
+outFilterScoreMinOverLread    0     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        40
+genomeDir                         /mnt/ix2/research_copy/sep_people/20131229_billy_projects/genomes/star_ensembl_grch37.75_ercc/
+readFilesIn                       /dev/fd/63   /dev/fd/62   
+outFileNamePrefix                 analysis/dedup_star/test.
+outSAMtype                        BAM   SortedByCoordinate   
+outSAMattributes                  NH   HI   AS   NM   MD   
+outSAMunmapped                    Within
+outFilterType                     BySJout
+outFilterMultimapNmax             20
+outFilterScoreMinOverLread        0
+outFilterMatchNminOverLread       0
+outFilterMismatchNmax             999
+alignIntronMin                    20
+alignIntronMax                    1000000
+alignMatesGapMax                  1000000
+alignSJoverhangMin                8
+alignSJDBoverhangMin              1
+sjdbScore                         1
+quantMode                         TranscriptomeSAM   GeneCounts   
+
+-------------------------------
+##### Final effective command line:
+/home/billylau/star   --runThreadN 40   --genomeDir /mnt/ix2/research_copy/sep_people/20131229_billy_projects/genomes/star_ensembl_grch37.75_ercc/   --readFilesIn /dev/fd/63   /dev/fd/62      --outFileNamePrefix analysis/dedup_star/test.   --outSAMtype BAM   SortedByCoordinate      --outSAMattributes NH   HI   AS   NM   MD      --outSAMunmapped Within   --outFilterType BySJout   --outFilterMultimapNmax 20   --outFilterScoreMinOverLread 0   --outFilterMatchNminOverLread 0   --outFilterMismatchNmax 999   --alignIntronMin 20   --alignIntronMax 1000000   --alignMatesGapMax 1000000   --alignSJoverhangMin 8   --alignSJDBoverhangMin 1   --sjdbScore 1   --quantMode TranscriptomeSAM   GeneCounts   
+
+##### Final parameters after user input--------------------------------:
+versionSTAR                       20201
+versionGenome                     20101   20200   
+parametersFiles                   -   
+sysShell                          -
+runMode                           alignReads
+runThreadN                        40
+runDirPerm                        User_RWX
+genomeDir                         /mnt/ix2/research_copy/sep_people/20131229_billy_projects/genomes/star_ensembl_grch37.75_ercc/
+genomeLoad                        NoSharedMemory
+genomeFastaFiles                  -   
+genomeSAindexNbases               14
+genomeChrBinNbits                 18
+genomeSAsparseD                   1
+readFilesIn                       /dev/fd/63   /dev/fd/62   
+readFilesCommand                  -   
+readMatesLengthsIn                NotEqual
+readMapNumber                     18446744073709551615
+inputBAMfile                      -
+bamRemoveDuplicatesType           -
+bamRemoveDuplicatesMate2basesN    0
+limitGenomeGenerateRAM            31000000000
+limitIObufferSize                 150000000
+limitOutSAMoneReadBytes           100000
+limitOutSJcollapsed               1000000
+limitOutSJoneRead                 1000
+limitBAMsortRAM                   0
+limitSjdbInsertNsj                1000000
+outFileNamePrefix                 analysis/dedup_star/test.
+outTmpDir                         -
+outStd                            Log
+outReadsUnmapped                  None
+outQSconversionAdd                0
+outSAMtype                        BAM   SortedByCoordinate   
+outSAMmode                        Full
+outSAMstrandField                 None
+outSAMattributes                  NH   HI   AS   NM   MD   
+outSAMunmapped                    Within
+outSAMorder                       Paired
+outSAMprimaryFlag                 OneBestScore
+outSAMreadID                      Standard
+outSAMmapqUnique                  255
+outSAMflagOR                      0
+outSAMflagAND                     65535
+outSAMattrRGline                  -   
+outSAMheaderHD                    -   
+outSAMheaderPG                    -   
+outSAMheaderCommentFile           -
+outBAMcompression                 1
+outBAMsortingThreadN              0
+outSJfilterReads                  All
+outSJfilterCountUniqueMin         3   1   1   1   
+outSJfilterCountTotalMin          3   1   1   1   
+outSJfilterOverhangMin            30   12   12   12   
+outSJfilterDistToOtherSJmin       10   0   5   10   
+outSJfilterIntronMaxVsReadN       50000   100000   200000   
+outWigType                        None   
+outWigStrand                      Stranded   
+outWigReferencesPrefix            -
+outWigNorm                        RPM   
+outFilterType                     BySJout
+outFilterMultimapNmax             20
+outFilterMultimapScoreRange       1
+outFilterScoreMin                 0
+outFilterScoreMinOverLread        0
+outFilterMatchNmin                0
+outFilterMatchNminOverLread       0
+outFilterMismatchNmax             999
+outFilterMismatchNoverLmax        0.3
+outFilterMismatchNoverReadLmax    1
+outFilterIntronMotifs             None
+clip5pNbases                      0   
+clip3pNbases                      0   
+clip3pAfterAdapterNbases          0   
+clip3pAdapterSeq                  -   
+clip3pAdapterMMp                  0.1   
+winBinNbits                       16
+winAnchorDistNbins                9
+winFlankNbins                     4
+winAnchorMultimapNmax             50
+scoreGap                          0
+scoreGapNoncan                    -8
+scoreGapGCAG                      -4
+scoreGapATAC                      -8
+scoreStitchSJshift                1
+scoreGenomicLengthLog2scale       -0.25
+scoreDelBase                      -2
+scoreDelOpen                      -2
+scoreInsOpen                      -2
+scoreInsBase                      -2
+seedSearchLmax                    0
+seedSearchStartLmax               50
+seedSearchStartLmaxOverLread      1
+seedPerReadNmax                   1000
+seedPerWindowNmax                 50
+seedNoneLociPerWindow             10
+seedMultimapNmax                  10000
+alignIntronMin                    20
+alignIntronMax                    1000000
+alignMatesGapMax                  1000000
+alignTranscriptsPerReadNmax       10000
+alignSJoverhangMin                8
+alignSJDBoverhangMin              1
+alignSplicedMateMapLmin           0
+alignSplicedMateMapLminOverLmate    0.66
+alignWindowsPerReadNmax           10000
+alignTranscriptsPerWindowNmax     100
+alignEndsType                     Local
+alignSoftClipAtReferenceEnds      Yes
+chimSegmentMin                    0
+chimScoreMin                      0
+chimScoreDropMax                  20
+chimScoreSeparation               10
+chimScoreJunctionNonGTAG          -1
+chimJunctionOverhangMin           20
+chimOutType                       SeparateSAMold
+sjdbFileChrStartEnd               -   
+sjdbGTFfile                       -
+sjdbGTFchrPrefix                  -
+sjdbGTFfeatureExon                exon
+sjdbGTFtagExonParentTranscript    transcript_id
+sjdbGTFtagExonParentGene          gene_id
+sjdbOverhang                      100
+sjdbScore                         1
+sjdbInsertSave                    Basic
+quantMode                         TranscriptomeSAM   GeneCounts   
+quantTranscriptomeBAMcompression    1
+quantTranscriptomeBan             IndelSoftclipSingleend
+twopass1readsN                    18446744073709551615
+twopassMode                       None
+----------------------------------------
+
+WARNING: --limitBAMsortRAM=0, will use genome sizeas RAM linit foro BAM sorting
+Finished loading and checking parameters
+Reading genome generation parameters:
+versionGenome                 20201        ~RE-DEFINED
+genomeFastaFiles              Homo_sapiens.GRCh37.75.dna.primary_assembly.ERCC.fa        ~RE-DEFINED
+genomeSAindexNbases           14     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+sjdbOverhang                  79     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   Homo_sapiens.GRCh37.75.ERCC.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+Genome version is compatible with current STAR version
+--sjdbOverhang = 79 taken from the generated genome
+Started loading the genome: Thu Aug 24 16:04:56 2017
+
+checking Genome sizefile size: 3194211408 bytes; state: good=1 eof=0 fail=0 bad=0
+checking SA sizefile size: 24084211053 bytes; state: good=1 eof=0 fail=0 bad=0
+checking /SAindex sizefile size: 1565873619 bytes; state: good=1 eof=0 fail=0 bad=0
+Read from SAindex: genomeSAindexNbases=14  nSAi=357913940
+nGenome=3194211408;  nSAbyte=24084211053
+GstrandBit=32   SA number of indices=5838596618
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 3194211408 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 3194211408 bytes
+SA file size: 24084211053 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 24084211053 bytes
+Loading SAindex ... done: 1565873619 bytes
+Finished loading the genome: Thu Aug 24 16:06:39 2017
+
+Number of real (reference) chromosmes= 176
+1	1	249250621	0
+2	10	135534747	249298944
+3	11	135006516	385089536
+4	12	133851895	520355840
+5	13	115169878	654311424
+6	14	107349540	769654784
+7	15	102531392	877133824
+8	16	90354753	979894272
+9	17	81195210	1070333952
+10	18	78077248	1151598592
+11	19	59128983	1229717504
+12	2	243199373	1288962048
+13	20	63025520	1532231680
+14	21	48129895	1595408384
+15	22	51304566	1643642880
+16	3	198022430	1695023104
+17	4	191154276	1893203968
+18	5	180915260	2084569088
+19	6	171115067	2265710592
+20	7	159138663	2436890624
+21	8	146364022	2596274176
+22	9	141213431	2742812672
+23	MT	16569	2884108288
+24	X	155270560	2884370432
+25	Y	59373566	3039821824
+26	GL000192.1	547496	3099328512
+27	GL000225.1	211173	3100114944
+28	GL000194.1	191469	3100377088
+29	GL000193.1	189789	3100639232
+30	GL000200.1	187035	3100901376
+31	GL000222.1	186861	3101163520
+32	GL000212.1	186858	3101425664
+33	GL000195.1	182896	3101687808
+34	GL000223.1	180455	3101949952
+35	GL000224.1	179693	3102212096
+36	GL000219.1	179198	3102474240
+37	GL000205.1	174588	3102736384
+38	GL000215.1	172545	3102998528
+39	GL000216.1	172294	3103260672
+40	GL000217.1	172149	3103522816
+41	GL000199.1	169874	3103784960
+42	GL000211.1	166566	3104047104
+43	GL000213.1	164239	3104309248
+44	GL000220.1	161802	3104571392
+45	GL000218.1	161147	3104833536
+46	GL000209.1	159169	3105095680
+47	GL000221.1	155397	3105357824
+48	GL000214.1	137718	3105619968
+49	GL000228.1	129120	3105882112
+50	GL000227.1	128374	3106144256
+51	GL000191.1	106433	3106406400
+52	GL000208.1	92689	3106668544
+53	GL000198.1	90085	3106930688
+54	GL000204.1	81310	3107192832
+55	GL000233.1	45941	3107454976
+56	GL000237.1	45867	3107717120
+57	GL000230.1	43691	3107979264
+58	GL000242.1	43523	3108241408
+59	GL000243.1	43341	3108503552
+60	GL000241.1	42152	3108765696
+61	GL000236.1	41934	3109027840
+62	GL000240.1	41933	3109289984
+63	GL000206.1	41001	3109552128
+64	GL000232.1	40652	3109814272
+65	GL000234.1	40531	3110076416
+66	GL000202.1	40103	3110338560
+67	GL000238.1	39939	3110600704
+68	GL000244.1	39929	3110862848
+69	GL000248.1	39786	3111124992
+70	GL000196.1	38914	3111387136
+71	GL000249.1	38502	3111649280
+72	GL000246.1	38154	3111911424
+73	GL000203.1	37498	3112173568
+74	GL000197.1	37175	3112435712
+75	GL000245.1	36651	3112697856
+76	GL000247.1	36422	3112960000
+77	GL000201.1	36148	3113222144
+78	GL000235.1	34474	3113484288
+79	GL000239.1	33824	3113746432
+80	GL000210.1	27682	3114008576
+81	GL000231.1	27386	3114270720
+82	GL000229.1	19913	3114532864
+83	GL000226.1	15008	3114795008
+84	GL000207.1	4262	3115057152
+85	ERCC-00002	1061	3115319296
+86	ERCC-00003	1023	3115581440
+87	ERCC-00004	523	3115843584
+88	ERCC-00009	984	3116105728
+89	ERCC-00012	994	3116367872
+90	ERCC-00013	808	3116630016
+91	ERCC-00014	1957	3116892160
+92	ERCC-00016	844	3117154304
+93	ERCC-00017	1136	3117416448
+94	ERCC-00019	644	3117678592
+95	ERCC-00022	751	3117940736
+96	ERCC-00024	536	3118202880
+97	ERCC-00025	1994	3118465024
+98	ERCC-00028	1130	3118727168
+99	ERCC-00031	1138	3118989312
+100	ERCC-00033	2022	3119251456
+101	ERCC-00034	1019	3119513600
+102	ERCC-00035	1130	3119775744
+103	ERCC-00039	740	3120037888
+104	ERCC-00040	744	3120300032
+105	ERCC-00041	1122	3120562176
+106	ERCC-00042	1023	3120824320
+107	ERCC-00043	1023	3121086464
+108	ERCC-00044	1156	3121348608
+109	ERCC-00046	522	3121610752
+110	ERCC-00048	992	3121872896
+111	ERCC-00051	274	3122135040
+112	ERCC-00053	1023	3122397184
+113	ERCC-00054	274	3122659328
+114	ERCC-00057	1021	3122921472
+115	ERCC-00058	1136	3123183616
+116	ERCC-00059	525	3123445760
+117	ERCC-00060	523	3123707904
+118	ERCC-00061	1136	3123970048
+119	ERCC-00062	1023	3124232192
+120	ERCC-00067	644	3124494336
+121	ERCC-00069	1137	3124756480
+122	ERCC-00071	642	3125018624
+123	ERCC-00073	603	3125280768
+124	ERCC-00074	522	3125542912
+125	ERCC-00075	1023	3125805056
+126	ERCC-00076	642	3126067200
+127	ERCC-00077	273	3126329344
+128	ERCC-00078	993	3126591488
+129	ERCC-00079	644	3126853632
+130	ERCC-00081	534	3127115776
+131	ERCC-00083	1022	3127377920
+132	ERCC-00084	994	3127640064
+133	ERCC-00085	844	3127902208
+134	ERCC-00086	1020	3128164352
+135	ERCC-00092	1124	3128426496
+136	ERCC-00095	521	3128688640
+137	ERCC-00096	1107	3128950784
+138	ERCC-00097	523	3129212928
+139	ERCC-00098	1143	3129475072
+140	ERCC-00099	1350	3129737216
+141	ERCC-00104	2022	3129999360
+142	ERCC-00108	1022	3130261504
+143	ERCC-00109	536	3130523648
+144	ERCC-00111	994	3130785792
+145	ERCC-00112	1136	3131047936
+146	ERCC-00113	840	3131310080
+147	ERCC-00116	1991	3131572224
+148	ERCC-00117	1136	3131834368
+149	ERCC-00120	536	3132096512
+150	ERCC-00123	1022	3132358656
+151	ERCC-00126	1118	3132620800
+152	ERCC-00130	1059	3132882944
+153	ERCC-00131	771	3133145088
+154	ERCC-00134	274	3133407232
+155	ERCC-00136	1033	3133669376
+156	ERCC-00137	537	3133931520
+157	ERCC-00138	1024	3134193664
+158	ERCC-00142	493	3134455808
+159	ERCC-00143	784	3134717952
+160	ERCC-00144	538	3134980096
+161	ERCC-00145	1042	3135242240
+162	ERCC-00147	1023	3135504384
+163	ERCC-00148	494	3135766528
+164	ERCC-00150	743	3136028672
+165	ERCC-00154	537	3136290816
+166	ERCC-00156	494	3136552960
+167	ERCC-00157	1019	3136815104
+168	ERCC-00158	1027	3137077248
+169	ERCC-00160	743	3137339392
+170	ERCC-00162	523	3137601536
+171	ERCC-00163	543	3137863680
+172	ERCC-00164	1022	3138125824
+173	ERCC-00165	872	3138387968
+174	ERCC-00168	1024	3138650112
+175	ERCC-00170	1023	3138912256
+176	ERCC-00171	505	3139174400
+Processing splice junctions database sjdbN=344496,   sjdbOverhang=79 
+To accomodate alignIntronMax=1000000 redefined winBinNbits=18
+To accomodate alignIntronMax=1000000 and alignMatesGapMax=1000000, redefined winFlankNbins=4 and winAnchorDistNbins=8
+Loaded transcript database, nTr=196593
+Loaded exon database, nEx=1195856
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread0 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread0 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread1 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread1 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread2 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread2 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread3 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread3 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread4 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread4 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread5 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread5 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread6 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread6 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread7 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread7 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread8 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread8 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread9 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread9 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread10 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread10 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread11 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread11 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread12 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread12 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread13 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread13 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread14 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread14 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread15 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread15 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread16 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread16 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread17 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread17 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread18 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread18 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread19 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread19 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread20 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread20 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread21 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread21 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread22 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread22 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread23 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread23 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread24 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread24 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread25 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread25 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread26 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread26 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread27 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread27 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread28 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread28 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread29 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread29 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread30 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread30 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread31 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread31 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread32 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread32 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread33 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread33 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread34 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread34 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread35 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread35 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread36 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread36 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread37 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread37 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread38 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread38 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate1.thread39 ... ok
+Opening the file: analysis/dedup_star/test._STARtmp//FilterBySJoutFiles.mate2.thread39 ... ok
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Created thread # 8
+Created thread # 9
+Created thread # 10
+Created thread # 11
+Created thread # 12
+Created thread # 13
+Created thread # 14
+Created thread # 15
+Created thread # 16
+Created thread # 17
+Created thread # 18
+Created thread # 19
+Created thread # 20
+Created thread # 21
+Created thread # 22
+Created thread # 23
+Created thread # 24
+Created thread # 25
+Created thread # 26
+Created thread # 27
+Created thread # 28
+Created thread # 29
+Created thread # 30
+Created thread # 31
+Created thread # 32
+Created thread # 33
+Created thread # 34
+Created thread # 35
+Created thread # 36
+Created thread # 37
+Created thread # 38
+Created thread # 39
+Completed: thread #2
+Completed: thread #4
+Completed: thread #3
+Completed: thread #9
+Completed: thread #6
+Completed: thread #15
+Completed: thread #7
+Completed: thread #8
+Completed: thread #18
+Completed: thread #19
+Completed: thread #20
+Completed: thread #5
+Completed: thread #22
+Completed: thread #23
+Completed: thread #11
+Completed: thread #12
+Completed: thread #13
+Completed: thread #24
+Completed: thread #25
+Completed: thread #26
+Completed: thread #27
+Completed: thread #10
+Completed: thread #28
+Completed: thread #14
+Completed: thread #16
+Completed: thread #30
+Completed: thread #31
+Completed: thread #21
+Completed: thread #29
+Completed: thread #17
+Completed: thread #32
+Completed: thread #33
+Completed: thread #34
+Completed: thread #35
+Completed: thread #36
+Completed: thread #37
+Completed: thread #38
+Completed: thread #0
+Completed: thread #39
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Joined thread # 8
+Joined thread # 9
+Joined thread # 10
+Joined thread # 11
+Joined thread # 12
+Joined thread # 13
+Joined thread # 14
+Joined thread # 15
+Joined thread # 16
+Joined thread # 17
+Joined thread # 18
+Joined thread # 19
+Joined thread # 20
+Joined thread # 21
+Joined thread # 22
+Joined thread # 23
+Joined thread # 24
+Joined thread # 25
+Joined thread # 26
+Joined thread # 27
+Joined thread # 28
+Joined thread # 29
+Joined thread # 30
+Joined thread # 31
+Joined thread # 32
+Joined thread # 33
+Joined thread # 34
+Joined thread # 35
+Joined thread # 36
+Joined thread # 37
+Joined thread # 38
+Joined thread # 39
+Completed stage 1 mapping of outFilterBySJout mapping
+Detected 2 novel junctions that passed filtering, will proceed to filter reads that contained unannotated junctions
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Created thread # 8
+Created thread # 9
+Created thread # 10
+Created thread # 11
+Created thread # 12
+Created thread # 13
+Created thread # 14
+Created thread # 15
+Created thread # 16
+Created thread # 17
+Created thread # 18
+Created thread # 19
+Created thread # 20
+Created thread # 21
+Created thread # 22
+Created thread # 23
+Created thread # 24
+BAM sorting: 0 mapped reads
+BAM sorting bins genomic start loci:
+1	0	12062160
+2	0	12062160
+3	0	12062160
+4	0	12062160
+5	0	12062160
+6	0	12062160
+7	0	12062160
+8	0	12062160
+9	0	12062160
+10	0	12062160
+11	0	12062160
+12	0	12062160
+13	0	12062160
+14	0	12062160
+15	0	12062160
+16	0	12062160
+Created thread # 25
+Completed: thread #2
+Completed: thread #3
+Completed: thread #5
+Completed: thread #7
+Completed: thread #8
+Completed: thread #6
+Completed: thread #10
+Completed: thread #21
+Completed: thread #22
+Completed: thread #4
+Completed: thread #18
+Completed: thread #19
+Completed: thread #25
+Completed: thread #9
+Created thread # 26
+Completed: thread #16
+Completed: thread #23
+Completed: thread #17
+Completed: thread #20
+Completed: thread #15
+Completed: thread #13
+Completed: thread #11
+Completed: thread #14
+Completed: thread #12
+Completed: thread #24
+Completed: thread #26
+Created thread # 27
+Created thread # 28
+Completed: thread #27
+Completed: thread #28
+Created thread # 29
+Created thread # 30
+Completed: thread #29
+Completed: thread #30
+Created thread # 31
+Created thread # 32
+Completed: thread #31
+Completed: thread #32
+Created thread # 33
+Created thread # 34
+Completed: thread #33
+Created thread # 35
+Completed: thread #35
+Completed: thread #34
+Created thread # 36
+Created thread # 37
+Completed: thread #36
+Completed: thread #37
+Created thread # 38
+Created thread # 39
+Completed: thread #38
+Completed: thread #39
+Completed: thread #0
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Joined thread # 8
+Joined thread # 9
+Joined thread # 10
+Joined thread # 11
+Joined thread # 12
+Joined thread # 13
+Joined thread # 14
+Joined thread # 15
+Joined thread # 16
+Joined thread # 17
+Joined thread # 18
+Joined thread # 19
+Joined thread # 20
+Joined thread # 21
+Joined thread # 22
+Joined thread # 23
+Joined thread # 24
+Joined thread # 25
+Joined thread # 26
+Joined thread # 27
+Joined thread # 28
+Joined thread # 29
+Joined thread # 30
+Joined thread # 31
+Joined thread # 32
+Joined thread # 33
+Joined thread # 34
+Joined thread # 35
+Joined thread # 36
+Joined thread # 37
+Joined thread # 38
+Joined thread # 39
+Aug 24 16:06:55 ..... Started sorting BAM
+Max memory needed for sorting = 401644
+ALL DONE!
